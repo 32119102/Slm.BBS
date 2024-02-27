@@ -1,0 +1,3557 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContIn.Abp.Terminal.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDetailDto">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDetailDto.Content">
+            <summary>
+            文章详情
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDetailDto.HtmlContent">
+            <summary>
+            文章html详情
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Id">
+            <summary>
+            文章编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.ContentType">
+            <summary>
+            内容类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Share">
+            <summary>
+            是否是分享的文章，如果是这里只会显示文章摘要，原文需要跳往原链接查看
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.SourceUrl">
+            <summary>
+            原文链接
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.ViewCount">
+            <summary>
+            查看数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDto.Tags">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto">
+            <summary>
+            文章简要模型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.ArticleId">
+            <summary>
+            文章编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.SourceUrl">
+            <summary>
+            原文链接
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.ViewCount">
+            <summary>
+            浏览数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto.Tags">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto">
+            <summary>
+            文章标签
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto.ArticleId">
+            <summary>
+            文章编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto.TagId">
+            <summary>
+            标签编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto.Tag">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleTagDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto">
+            <summary>
+            新增编辑文字
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto.Content">
+            <summary>
+            文字内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto.Tags">
+            <summary>
+            标签，逗号分隔
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Articles.SearchArticlePagedDto)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetTagsAsync(System.Int64)">
+            <summary>
+            查询文章标签信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.UpdateTagsAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Articles.UpdateArticleTagDto)">
+            <summary>
+            修改文章标签
+            </summary>
+            <param name="id">文章编号</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除文章
+            </summary>
+            <param name="id">文章编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.PendingAsync(System.Int64)">
+            <summary>
+            审核通过
+            </summary>
+            <param name="id">文章编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetUserArticlesAsync(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            获取用户文章列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetArticlesAsync(System.Int64,System.Int32)">
+            <summary>
+            获取文章列表
+            </summary>
+            <param name="cursor">偏移量</param>
+            <param name="limit">显示数</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetAsync(System.Int64)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id">文章编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetSimpleAsync(System.Int64)">
+            <summary>
+            获取文章信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetNearlyAsync(System.Int64)">
+            <summary>
+            获取近期文章
+            </summary>
+            <param name="articleId">文章编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.GetRelatedAsync(System.Int64)">
+            <summary>
+            获取相关文章
+            </summary>
+            <param name="articleId">文章编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.PostFavoriteAsync(System.Int64)">
+            <summary>
+            收藏
+            </summary>
+            <param name="articleId">文章编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.PostCreateAsync(ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto)">
+            <summary>
+            新增文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto)">
+            <summary>
+            修改文章
+            </summary>
+            <param name="id">文章编号</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService.RemoveCacheAsync(System.Int64)">
+            <summary>
+            移除文章缓存
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.SearchArticlePagedDto">
+            <summary>
+            文章搜索
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.SearchArticlePagedDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.SearchArticlePagedDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.SearchArticlePagedDto.Status">
+            <summary>
+            状态 0-正常 1-删除 2- 待审核
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Articles.UpdateArticleTagDto">
+            <summary>
+            修改文章标签
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Articles.UpdateArticleTagDto.TagIds">
+            <summary>
+            标签编号，逗号分隔
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto">
+            <summary>
+            Github授权后的用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.login">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.id">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.avatar_url">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.html_url">
+            <summary>
+            github地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.name">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.company">
+            <summary>
+            公司
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.blog">
+            <summary>
+            博客地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.location">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.GitHubUserInfoDto.email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService">
+            <summary>
+            github授权
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.GetLoginAddressAsync">
+            <summary>
+            获取github登录地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.GenerateTokenAsync(System.String)">
+            <summary>
+            生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.SignInAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto)">
+            <summary>
+            用户名密码登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.SiteSignInAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto)">
+            <summary>
+            社区用户名密码登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.SiteSignoutAsync(System.String)">
+            <summary>
+            社区用户退出登录
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.RefreshTokenAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.RefreshTokenInputDto)">
+            <summary>
+            刷新JwtToken
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.IAuthorizeService.SiteSignUpAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto)">
+            <summary>
+            注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Authorize.RefreshTokenInputDto">
+            <summary>
+            刷新JwtToken
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.RefreshTokenInputDto.Token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserLoginDto">
+            <summary>
+            登录响应信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserLoginDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserLoginDto.Token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto">
+            <summary>
+            注册
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.RePassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.CaptchaId">
+            <summary>
+            验证码编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.CaptchaCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            自定义验证逻辑
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto">
+            <summary>
+            后台登录
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto.CaptchaId">
+            <summary>
+            验证码编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto.CaptchaCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobFileInputOutputDto">
+            <summary>
+            文件存储
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobFileInputOutputDto.Content">
+            <summary>
+            文件内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobFileInputOutputDto.Name">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureInputOutputDto">
+            <summary>
+            图片存储
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureInputOutputDto.Content">
+            <summary>
+            文件内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureInputOutputDto.Name">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureWithPreviewDto">
+            <summary>
+            图片上传响应，带缩略图
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureWithPreviewDto.Url">
+            <summary>
+            原图地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureWithPreviewDto.Preview">
+            <summary>
+            缩略图预览地址
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobPictureAppService">
+            <summary>
+            图片存储
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobPictureAppService.SaveBlobPictureAsync(ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureInputOutputDto)">
+            <summary>
+            保存图片BLOB
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobPictureAppService.GetBlobPictureAsync(System.String)">
+            <summary>
+            读取BLOB
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobProfileAppService">
+            <summary>
+            文件存储接口
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobProfileAppService.SaveBlobProfileAsync(ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobFileInputOutputDto)">
+            <summary>
+            保存文件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobProfileAppService.GetBlobProfileAsync(System.String)">
+            <summary>
+            读取文件
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Captcha.CaptchaDto">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Captcha.CaptchaDto.CaptchaId">
+            <summary>
+            验证码编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Captcha.CaptchaDto.CaptchaCodeImg">
+            <summary>
+            验证码图片，base64格式
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Captcha.CaptchaDto.ImgType">
+            <summary>
+            图片类型
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Captcha.ICaptchaAppService">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Captcha.ICaptchaAppService.GetRequestAsync(System.String)">
+            <summary>
+            获取验证码
+            </summary>
+            <param name="captchaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Captcha.ICaptchaAppService.ValideCaptchaCodeAsync(System.String,System.String)">
+            <summary>
+            验证验证码
+            </summary>
+            <param name="captchaId"></param>
+            <param name="captchaCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.Id">
+            <summary>
+            评论编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.EntityType">
+            <summary>
+            被评论实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.EntityId">
+            <summary>
+            被评论实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.ImageList">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.ContentType">
+            <summary>
+            内容类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.QuoteId">
+            <summary>
+            引用的评论编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.LikeCount">
+            <summary>
+            点赞数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.CommentCount">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.UserAgent">
+            <summary>
+            UserAgent
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.CommentId">
+            <summary>
+            评论编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.EntityType">
+            <summary>
+            被评论实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.EntityId">
+            <summary>
+            被评论实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.ImageList">
+            <summary>
+            图片
+            [{"preview":"","url":""}]
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.ContentType">
+            <summary>
+            内容类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.QuoteId">
+            <summary>
+            引用的评论编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.Quote">
+            <summary>
+            引用评论内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.LikeCount">
+            <summary>
+            点赞数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.CommentCount">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.Liked">
+            <summary>
+            是否点赞
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto.Replies">
+            <summary>
+            二级回复
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto.ContentType">
+            <summary>
+            评论内容类型
+            默认text
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto.EntityId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto.ImageList">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto.QuoteId">
+            <summary>
+            引用评论编号
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService">
+            <summary>
+            评论服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id">编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService.GetCommentsAsync(System.String,System.Int64,System.Int64)">
+            <summary>
+            获取评论
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService.GetRepliesAsync(System.Int64,System.Int64)">
+            <summary>
+            获取评论回复
+            </summary>
+            <param name="commentId"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService.PostCreateAsync(ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto)">
+            <summary>
+            新增评论
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Comments.ICommentAppService.PostLikedAsync(System.Int64)">
+            <summary>
+            点赞
+            </summary>
+            <param name="commentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto">
+            <summary>
+            评论搜索
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto.Id">
+            <summary>
+            评论编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto.EntityType">
+             <summary>
+            评论对象
+             </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto.EntityId">
+            <summary>
+            对象编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto.Status">
+            <summary>
+            状态 0-正常 1-删除
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.CustomValidationContributor">
+            <summary>
+            手动验证对象逻辑
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.CustomValidationContributor.AddErrorsAsync(Volo.Abp.Validation.ObjectValidationContext)">
+            <summary>
+            验证
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Favorites.IFavoriteAppService">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Favorites.IFavoriteAppService.GetFavoritesAsync(System.Int64)">
+            <summary>
+            获取用户收藏列表
+            </summary>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.FavoriteId">
+            <summary>
+            收藏编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.EntityId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.Content">
+            <summary>
+            内容，显示简介
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.Url">
+            <summary>
+            实体地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Favorites.UserFavoriteSimpleDto.Deleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Feed.IUserFeedAppService">
+            <summary>
+            Feed
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Feed.IUserFeedAppService.DeleteByUserAsync(System.Int64,System.Int64)">
+            <summary>
+            根据用户删除
+            </summary>
+            <param name="userId"></param>
+            <param name="authorId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Feed.IUserFeedAppService.DeleteByDataIdAsync(System.Int64,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum)">
+            <summary>
+            根据实体删除
+            </summary>
+            <param name="dataId"></param>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Feed.IUserFeedAppService.CreateByUserAsync(System.Int64,System.Int64,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum)">
+            <summary>
+            新增Feed流数据
+            </summary>
+            <param name="userId">实体作者ID</param>
+            <param name="dataId">实体ID</param>
+            <param name="dataType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Feed.IUserFeedAppService.GetUserFeedsAsync(System.Int64,System.Int64,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum,System.Int32)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="dataType"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto">
+            <summary>
+            Feed
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto.Id">
+            <summary>
+            编号 
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto.DataId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto.DataType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto.AuthorId">
+            <summary>
+            实体作者ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Feed.UserFeedDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService">
+            <summary>
+            粉丝关注
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService.IsFollowedAsync(System.Int64)">
+            <summary>
+            是否关注
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService.GetUserFollowedAsync(System.Int64,System.Int64)">
+            <summary>
+            是否关注，有缓存
+            </summary>
+            <param name="userId"></param>
+            <param name="otherUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService.GetFollowsAsync(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            获取用户关注列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService.GetFansAsync(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            获取用户粉丝列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService.PostFollowAsync(ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowUpdateDto)">
+            <summary>
+            关注
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService.PostUnFollowAsync(ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowUpdateDto)">
+            <summary>
+            取消关注
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto">
+            <summary>
+            粉丝关注
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto.OtherId">
+            <summary>
+            关注用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowFansDto">
+            <summary>
+            关注粉丝
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowFansDto.Cursor">
+            <summary>
+            游标，上一条记录的编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowFansDto.HasMore">
+            <summary>
+            是否还有更多
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowFansDto.Results">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowUpdateDto">
+            <summary>
+            关注和取消关注
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowUpdateDto.UserId">
+            <summary>
+            对方用户编号
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto">
+            <summary>
+            友情链接
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto.Summary">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto.Logo">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto">
+            <summary>
+            友情链接
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.Summary">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.Logo">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto">
+            <summary>
+            友链
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto.LinkId">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto.Summary">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto.Logo">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkSimpleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectInputDto">
+            <summary>
+            采集网站名称和描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectInputDto.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectOutputDto">
+            <summary>
+            采集网站名称和描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectOutputDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectOutputDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.GetFriendlyLinkListDto">
+            <summary>
+            列表查询
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.GetFriendlyLinkListDto.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Links.GetFriendlyLinkListDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService">
+            <summary>
+            友情链接
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.GetAsync(System.Int64)">
+            <summary>
+            获取单条信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.PostListAsync(ContIn.Abp.Terminal.Application.Contracts.Links.GetFriendlyLinkListDto)">
+            <summary>
+            获取列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto)">
+            <summary>
+            新增信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto)">
+            <summary>
+            修改信息
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.PostDetectAsync(ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectInputDto)">
+            <summary>
+            采集网站信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.GetTopLinksAsync">
+            <summary>
+            获取前10个链接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Links.IFriendlyLinkAppService.GetLinksAsync(System.Int32)">
+            <summary>
+            获取分页数据
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Messages.IMessageAppService">
+            <summary>
+            消息应用服务接口
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Messages.IMessageAppService.GetMsgRecentAsync">
+            <summary>
+            获取用户最近未读消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Messages.IMessageAppService.GetMessagesAsync(System.Int32)">
+            <summary>
+            获取用户消息列表
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Messages.IMessageAppService.AddMessageAsync(System.Int64,System.Int64,System.String,System.String,System.String,ContIn.Abp.Terminal.Domain.Shared.MessageType,System.String)">
+            <summary>
+            新增消息
+            </summary>
+            <param name="fromId">消息发送人</param>
+            <param name="userId">消息接收人</param>
+            <param name="title">标题</param>
+            <param name="content">内容</param>
+            <param name="quoteContent">引用内容</param>
+            <param name="type">类型</param>
+            <param name="extraData">扩展属性</param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.MessageId">
+            <summary>
+            消息编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.FromId">
+            <summary>
+            消息发送人
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.UserId">
+            <summary>
+            用户编号、消息接收人
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.QuoteContent">
+            <summary>
+            引用内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.Type">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.ExtraData">
+            <summary>
+            扩展数据
+            话题相关：{ "topicId":1, "userId":1 }
+            评论相关：{ "entityType": "", "entityId": "", "commentId": "", "quoteId": "" }
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.Status">
+            <summary>
+            消息状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.DetailUrl">
+            <summary>
+            详情链接
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto.From">
+            <summary>
+            消息发送人信息
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageEntityExtraDataDto">
+            <summary>
+            消息实体相关扩展字段
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageEntityExtraDataDto.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageEntityExtraDataDto.EntityId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageEntityExtraDataDto.CommentId">
+            <summary>
+            评论编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageEntityExtraDataDto.QuoteId">
+            <summary>
+            引用编号
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageTopicExtraDataDto">
+            <summary>
+            消息中话题扩展数据
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageTopicExtraDataDto.TopicId">
+            <summary>
+            话题编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.MessageTopicExtraDataDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Messages.UserMessagesDto">
+            <summary>
+            用户消息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.UserMessagesDto.Count">
+            <summary>
+            未读消息数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Messages.UserMessagesDto.Messages">
+            <summary>
+            未读消息列表
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Search.ISearchAppService">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Search.ISearchAppService.PostTopicsAsync(ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto)">
+            <summary>
+            搜索话题列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto.Keyword">
+            <summary>
+            关键词
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto.NodeId">
+            <summary>
+            节点编号
+            0：全部，-1：推荐
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto.TimeRange">
+            <summary>
+            时间范围，0：时间不限，1：一天内，2：一周内，3：一月内，4：一年内
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto.Page">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.SitePagedResultDto`1">
+            <summary>
+            分页响应数据
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagedResultDto`1.Cursor">
+            <summary>
+            游标，上一条数据编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagedResultDto`1.HasMore">
+            <summary>
+            是否还有更多
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagedResultDto`1.Results">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.SitePagingResultDto`1">
+            <summary>
+            分页响应
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagingResultDto`1.Page">
+            <summary>
+            分页模型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagingResultDto`1.Results">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.SitePagingResultDto`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.SitePagingPage">
+            <summary>
+            分页模型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagingPage.Limit">
+            <summary>
+            每页显示数
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagingPage.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SitePagingPage.Total">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto">
+            <summary>
+            服务器信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.OsVersion">
+            <summary>
+            系统版本
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.Arch">
+            <summary>
+            系统架构
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.ProcessorCount">
+            <summary>
+            线程数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.ApplicationBasePath">
+            <summary>
+            程序物理路径
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.ApplicationName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.ApplicationVersion">
+            <summary>
+            应用版本
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.RuntimeFramework">
+            <summary>
+            框架版本
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.Host">
+            <summary>
+            服务器IP
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.Port">
+            <summary>
+            服务器端口
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.SystemInfoDto.MachineName">
+            <summary>
+            服务器名称
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService">
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService.GetAllAsync">
+            <summary>
+            获取配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService.PostSaveAsync(ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto)">
+            <summary>
+            保存配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto">
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.SiteTitle">
+            <summary>
+            站点标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.SiteDescription">
+            <summary>
+            站点描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.SiteKeywords">
+            <summary>
+            站点关键字
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.SiteNotification">
+            <summary>
+            网站公告
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.RecommendTags">
+            <summary>
+            推荐标签
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.DefaultNodeId">
+            <summary>
+            默认节点
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.LoginMethod">
+            <summary>
+            登录方式
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.UrlRedirect">
+            <summary>
+            站外链接跳转页面
+            在跳转前需手动确认是否前往该站外链接
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.SiteNavs">
+            <summary>
+            导航配置
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.ScoreConfig">
+            <summary>
+            积分配置
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.TopicCaptcha">
+            <summary>
+            发帖验证码
+            发帖时是否开启验证码校验
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.CreateTopicEmailVerified">
+            <summary>
+            邮箱验证后发帖
+            需要验证邮箱后才能发帖
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.CreateArticleEmailVerified">
+            <summary>
+            邮箱验证后发表文章
+            需要验证邮箱后才能发表文章
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.CreateCommentEmailVerified">
+            <summary>
+            邮箱验证后评论
+            需要验证邮箱后才能发表评论
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.ArticlePending">
+            <summary>
+            发表文章审核
+            发布文章后是否开启审核
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.UserObserveSeconds">
+            <summary>
+            用户观察期(秒)
+            观察期内用户无法发表话题、动态等内容，设置为 0 表示无观察期。
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto.TokenExpireDays">
+            <summary>
+            用户登录有效期（天）
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigLoginMethodDto">
+            <summary>
+            登录方式
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigLoginMethodDto.Password">
+            <summary>
+            密码登录
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigLoginMethodDto.Qq">
+            <summary>
+            QQ登录
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigLoginMethodDto.Github">
+            <summary>
+            GitHub登录
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigLoginMethodDto.Osc">
+            <summary>
+            OSChina登录
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigScoreConfigDto">
+            <summary>
+            积分配置
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigScoreConfigDto.PostTopicScore">
+            <summary>
+            发帖积分
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigScoreConfigDto.PostCommentScore">
+            <summary>
+            跟帖积分
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigScoreConfigDto.CheckInScore">
+            <summary>
+            签到积分
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigSiteNavsDto">
+            <summary>
+            导航配置
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigSiteNavsDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigSiteNavsDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto">
+            <summary>
+            新增更新数据传输对象
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            自定义验证逻辑
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDtoValidator">
+            <summary>
+            标签验证器
+            FluentValidation
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDtoValidator.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Tags.GetTagListDto">
+            <summary>
+            列表查询
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.GetTagListDto.Name">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.GetAsync(System.Int64)">
+            <summary>
+            获取标签信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.GetListAsync(ContIn.Abp.Terminal.Application.Contracts.Tags.GetTagListDto)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto)">
+            <summary>
+            新增标签信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto)">
+            <summary>
+            修改标签信息
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除标签
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.GetAutoCompleteAsync(System.String)">
+            <summary>
+            标签模糊匹配
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Tags.ITagAppService.GetTagsAsync(System.Int32)">
+            <summary>
+            获取分页数据
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto">
+            <summary>
+            标签数据传输对象
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Tags.TagSimpleDto">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagSimpleDto.TagId">
+            <summary>
+            标签编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Tags.TagSimpleDto.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.TerminalApplicationContractsModule">
+            <summary>
+            应用服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.TerminalApplicationContractsModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            注册服务
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.Type">
+            <summary>
+            类型 0-话题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.NodeId">
+            <summary>
+            节点
+            系统有默认几点
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.Content">
+            <summary>
+            内容
+            图片和内容不能同时为空
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.ImageList">
+            <summary>
+            图片
+            图片和内容不能同时为空
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.Tags">
+            <summary>
+            标签，逗号分隔
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.CaptchaId">
+            <summary>
+            验证码编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.CaptchaCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            自定义验证规则
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto">
+            <summary>
+            节点
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto.SortNo">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto.Logo">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.GetTopicNodeListDto">
+            <summary>
+            节点
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.GetTopicNodeListDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.SetRecommendAsync(System.Int64,System.Boolean)">
+            <summary>
+            设置推荐
+            </summary>
+            <param name="id"></param>
+            <param name="recommend"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.SetDeleteAsync(System.Int64,System.String)">
+            <summary>
+            设置状态，0-正常 1-删除
+            只有管理员能操作
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PostDeleteAsync(System.Int64)">
+            <summary>
+            删除话题
+            只有作者和管理员能操作
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetNodesAsync">
+            <summary>
+            获取所有节点信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetNodeAsync(System.Int64)">
+            <summary>
+            获取节点信息
+            </summary>
+            <param name="nodeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetUserTopicsAsync(System.Int64,System.Int64)">
+            <summary>
+            获取用户话题列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetTopicsAsync(System.Int64,System.Boolean,System.Int64)">
+            <summary>
+            获取话题列表
+            </summary>
+            <param name="nodeId"></param>
+            <param name="recommend"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetStickyTopicsAsync(System.Int64)">
+            <summary>
+            获取置顶话题
+            </summary>
+            <param name="nodeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PostStickyAsync(System.Int64,System.Boolean)">
+            <summary>
+            设置话题置顶
+            </summary>
+            <param name="topicId"></param>
+            <param name="sticky"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetTagTopicsAsync(System.Int64,System.Int64)">
+            <summary>
+            获取标签相关文章列表
+            </summary>
+            <param name="tagId">标签编号</param>
+            <param name="cursor">偏移编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetAsync(System.Int64)">
+            <summary>
+            获取话题详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetSimpleAsync(System.Int64)">
+            <summary>
+            获取话题信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetRecentLikedAsync(System.Int64)">
+            <summary>
+            获取最近点赞信息
+            </summary>
+            <param name="topicId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PostFavoriteAsync(System.Int64)">
+            <summary>
+            收藏
+            </summary>
+            <param name="topicId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PostLikeAsync(System.Int64)">
+            <summary>
+            点赞
+            </summary>
+            <param name="topicId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PostCreateAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto)">
+            <summary>
+            新增话题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.PutUpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto)">
+            <summary>
+            修改话题
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.GetFeedsAsync(System.Int64)">
+            <summary>
+            获取关注人的话题列表
+            </summary>
+            <param name="cursor">上一条话题的创建时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService.RemoveCacheAsync(System.Int64)">
+            <summary>
+            移除话题缓存
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicNodeAppService">
+            <summary>
+            节点应用服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicNodeAppService.GetAsync(System.Int64)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicNodeAppService.PostListAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.GetTopicNodeListDto)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicNodeAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicNodeAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicNodeAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto.Recommend">
+            <summary>
+            是否推荐，0-否 1-是
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto.Status">
+            <summary>
+            状态 0-正常 1-删除
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto.Sticky">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDetailDto">
+            <summary>
+            话题详情
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDetailDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Id">
+            <summary>
+            话题编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.NodeId">
+            <summary>
+            节点编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.ImageList">
+            <summary>
+            图片
+            [{"preview":"","url":""}]
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Recommend">
+            <summary>
+            是否推荐
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.RecommendTime">
+            <summary>
+            推荐时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.ViewCount">
+            <summary>
+            查看数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.CommentCount">
+            <summary>
+            跟帖数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.LikeCount">
+            <summary>
+            点赞数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.LastCommentTime">
+            <summary>
+            最后回复时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.LastCommentUserId">
+            <summary>
+            最后回复用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.UserAgent">
+            <summary>
+            UserAgent
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.ExtraData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Sticky">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.StickyTime">
+            <summary>
+            置顶时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Summary">
+            <summary>
+            摘要
+            内容前128位
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Node">
+            <summary>
+            节点信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDto.Tags">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicImageDto">
+            <summary>
+            图片信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicImageDto.Preview">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicImageDto.Url">
+            <summary>
+            原图地址
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto">
+            <summary>
+            节点
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.SortNo">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.Logo">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeSimpleDto">
+            <summary>
+            节点信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeSimpleDto.NodeId">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeSimpleDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeSimpleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeSimpleDto.Logo">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicPagedResultDto">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicPagedResultDto.Cursor">
+            <summary>
+            游标，上一个话题的编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicPagedResultDto.HasMore">
+            <summary>
+            是否还有更多
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicPagedResultDto.Results">
+            <summary>
+            话题列表
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.TopicId">
+            <summary>
+            话题编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.ImageList">
+            <summary>
+            图片
+            [{"preview":"","url":""}]
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Recommend">
+            <summary>
+            是否推荐
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.RecommendTime">
+            <summary>
+            推荐时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.ViewCount">
+            <summary>
+            查看数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.CommentCount">
+            <summary>
+            跟帖数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.LikeCount">
+            <summary>
+            点赞数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.LastCommentTime">
+            <summary>
+            最后回复时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Summary">
+            <summary>
+            摘要
+            内容前128位
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.NodeId">
+            <summary>
+            节点编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Node">
+            <summary>
+            节点信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Tags">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Liked">
+            <summary>
+            是否点赞
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.Sticky">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto.StickyTime">
+            <summary>
+            置顶时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto">
+            <summary>
+            签到
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.DayName">
+            <summary>
+            最后一次签到
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.ConsecutiveDays">
+            <summary>
+            连续签到天数
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto.CheckIn">
+            <summary>
+            今天是否签到
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto">
+            <summary>
+            新增编辑用户对象
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            自定义验证逻辑
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUserLikeDto">
+            <summary>
+            新增用户点赞
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUserLikeDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUserLikeDto.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.CreateUserLikeDto.EntityId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.GetPagedUserListDto">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.GetPagedUserListDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.GetPagedUserListDto.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.ICheckInAppService">
+            <summary>
+            签到
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.ICheckInAppService.GetCheckInAsync(System.Int64)">
+            <summary>
+            获取用户签到信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.ICheckInAppService.PostCheckInAsync">
+            <summary>
+            用户签到
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.ICheckInAppService.GetRankAsync">
+            <summary>
+            获取当前签到排行榜，越早签到的排在越前面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.GetCurrentAsync(System.Boolean)">
+            <summary>
+            获取当前登录用户信息
+            </summary>
+            <param name="throwException">是否直接抛出异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.GetSiteCurrentAsync(System.Boolean)">
+            <summary>
+            获取当前登录用户信息，如果没有返回null
+            </summary>
+            <param name="throwException">是否直接抛出异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.GetUserProfileAsync(System.Int64)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.GetAsync(System.Int64)">
+            <summary>
+            根据用户编号获取信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.GetSimpleUserAsync(System.Int64)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Users.GetPagedUserListDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.GetScoreRankAsync">
+            <summary>
+            获取积分排行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.SetBackgroundImageAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetBackgroundImageDto)">
+            <summary>
+            设置背景图片
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.SetUserAvatarAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetBackgroundImageDto)">
+            <summary>
+            设置用户头像
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.UpdateUserInfoAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserInfoDto)">
+            <summary>
+            个人资料修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.IncrTopicCountAsync(System.Int64)">
+            <summary>
+            增加话题数
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.IncrOrDecrFansCountAsync(System.Int64,System.Int32)">
+            <summary>
+            增加粉丝数
+            </summary>
+            <param name="userId"></param>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.IncrOrDecrFollowsCountAsync(System.Int64,System.Int32)">
+            <summary>
+            增加关注数
+            </summary>
+            <param name="userId"></param>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.AddScoreAsync(System.Int64,System.Int32,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum,System.Int64,System.String)">
+            <summary>
+            增加或者减少积分
+            </summary>
+            <param name="userId">用户编号</param>
+            <param name="score">分数</param>
+            <param name="sourceType">来源类型</param>
+            <param name="sourceId">来源编号</param>
+            <param name="description">描述</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.PostSetPasswordAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetUserPasswordDto)">
+            <summary>
+            设置密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.PostUpdatePasswordAsync(ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.SetUsernameAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetUsernameDto)">
+            <summary>
+            设置用户名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.SetEmailAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetUserEmailDto)">
+            <summary>
+            设置邮箱
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.CheckUserStatusAsync(ContIn.Abp.Terminal.Application.Contracts.Users.UserDto)">
+            <summary>
+            校验用户状态
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService.HasAnyRoleAsync(System.Collections.Generic.List{System.String},ContIn.Abp.Terminal.Domain.Shared.Enum.RoleTypeEnum)">
+            <summary>
+            检查是否有权限
+            </summary>
+            <param name="userRoles"></param>
+            <param name="roleType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.IUserFavoriteAppService">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserFavoriteAppService.GetFavoritedAsync(System.String,System.Int64)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserFavoriteAppService.DeletedAsync(System.String,System.Int64)">
+            <summary>
+            取消收藏
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserFavoriteAppService.InsertAsync(System.Int64,System.String,System.Int64)">
+            <summary>
+            新增收藏
+            </summary>
+            <param name="userId">用户编号</param>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService">
+            <summary>
+            点赞
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService.GetLikedAsync(System.String,System.Int64)">
+            <summary>
+            是否点赞
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService.GetRecentAsync(System.String,System.Int64,System.Int32)">
+            <summary>
+            获取最近点赞
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <param name="limit">获取数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService.InsertAsync(ContIn.Abp.Terminal.Application.Contracts.Users.CreateUserLikeDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.IUserScoreLogAppService">
+            <summary>
+            用户积分记录
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserScoreLogAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SearchUserScoreLogPagedDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.IUserScoreLogAppService.GetScoreLogsAsync(System.Int32)">
+            <summary>
+            获取用户积分记录
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.SearchUserScoreLogPagedDto">
+            <summary>
+            用户积分记录
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.SearchUserScoreLogPagedDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.SetBackgroundImageDto">
+            <summary>
+            设置背景图片
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.SetBackgroundImageDto.Url">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.SetUserEmailDto">
+            <summary>
+            设置邮箱
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.SetUserEmailDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.SetUsernameDto">
+            <summary>
+            设置用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.SetUsernameDto.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.SetUserPasswordDto">
+            <summary>
+            设置密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.SetUserPasswordDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.SetUserPasswordDto.RePassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.SetUserPasswordDto.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            自定义验证规则
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserInfoDto">
+            <summary>
+            个人资料修改
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserInfoDto.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserInfoDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserInfoDto.HomePage">
+            <summary>
+            个人主页
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto">
+            <summary>
+            修改密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto.OldPassword">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto.RePassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            自定义验证规则
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto">
+            <summary>
+            用户传输对象
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.EmailVerified">
+            <summary>
+            邮箱是否验证
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Nickname">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.BackgroundImage">
+            <summary>
+            个人中心背景图片
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.HomePage">
+            <summary>
+            个人主页
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Score">
+            <summary>
+            积分
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.TopicCount">
+            <summary>
+            帖子数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.CommentCount">
+            <summary>
+            跟帖数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.ForbiddenEndTime">
+            <summary>
+            禁言结束时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.FansCount">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.FollowCount">
+            <summary>
+            关注数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto.Id">
+            <summary>
+            收藏编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto.EntityId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto">
+            <summary>
+            点赞
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto.EntityId">
+            <summary>
+            实体编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto.PasswordSet">
+            <summary>
+            是否设置密码
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto.EmailVerified">
+            <summary>
+            邮箱是否验证
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto.BackgroundImage">
+            <summary>
+            个人中心背景图片
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserProfileDto.HomePage">
+            <summary>
+            个人主页
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto">
+            <summary>
+            用户积分记录
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.Id">
+            <summary>
+            记录编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.SourceType">
+            <summary>
+            积分来源类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.SourceId">
+            <summary>
+            积分来源编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.Score">
+            <summary>
+            积分
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserScoreLogDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto">
+            <summary>
+            简要用户信息
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.Id">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.Nickname">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.SmallAvatar">
+            <summary>
+            头像小图
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.Score">
+            <summary>
+            积分
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.TopicCount">
+            <summary>
+            帖子数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.CommentCount">
+            <summary>
+            跟帖数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.FansCount">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.FollowCount">
+            <summary>
+            关注数量
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.Contracts.Users.UserSimpleDto.Followed">
+            <summary>
+            是否关注
+            </summary>
+        </member>
+    </members>
+</doc>

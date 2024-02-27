@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Caching" Version="5.3.3" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContIn.Abp.Terminal.FreeRedis\ContIn.Abp.Terminal.FreeRedis.csproj" />
+  </ItemGroup>
+
+</Project>

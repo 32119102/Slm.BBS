@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContIn.Abp.Terminal.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="T:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController">
+            <summary>
+            公共控制器
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Volo.Abp.Json.IJsonSerializer,Microsoft.Extensions.Logging.ILogger{ContIn.Abp.Terminal.HttpApi.Controllers.CommonController},Volo.Abp.Auditing.IAuditingHelper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+            <param name="jsonSerializer"></param>
+            <param name="logger"></param>
+            <param name="auditingHelper"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.GetAuditingAsync">
+            <summary>
+            审计信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.GetSystemInfoAsync">
+            <summary>
+            系统信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.GetClockTime">
+            <summary>
+            当前时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.GetConfigRootProviders">
+            <summary>
+            获取配置提供程序
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.TriggerException(System.String)">
+            <summary>
+            触发异常
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.CommonController.LoggerTest">
+            <summary>
+            记录日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.HttpApi.Controllers.FileController">
+            <summary>
+            文件操作
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.#ctor(ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobPictureAppService,ContIn.Abp.Terminal.Application.Contracts.BlobContainers.IBlobProfileAppService,Microsoft.Extensions.Options.IOptionsMonitor{ContIn.Abp.Terminal.Domain.Shared.Options.AppOptions})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pictureAppService"></param>
+            <param name="fileAppService"></param>
+            <param name="appOptions"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.SaveProPictureBlobAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传图片
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.SaveBlogPictureWithPreviewAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传图片，生成缩略图
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.SaveProfileBlobAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.VisitProPictureAsync(System.String)">
+            <summary>
+            访问图片
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.VisitProfileAsync(System.String)">
+            <summary>
+            访问文件
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.Controllers.FileController.CheckRequestSizeLimit(System.Int64)">
+            <summary>
+            检查文件大小限制
+            20M
+            </summary>
+            <param name="length"></param>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.HttpApi.TerminalHttpApiModule">
+            <summary>
+            HttpApi
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.HttpApi.TerminalHttpApiModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            注册服务
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

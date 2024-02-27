@@ -1,0 +1,1662 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContIn.Abp.Terminal.Application</name>
+    </assembly>
+    <members>
+        <member name="T:ContIn.Abp.Terminal.Application.Articles.ArticleAppService">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.#ctor(ContIn.Abp.Terminal.Domain.Articles.IArticleRepository,ContIn.Abp.Terminal.Domain.Users.IUserRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService,ContIn.Abp.Terminal.Domain.Articles.IArticleTagRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserFavoriteAppService,ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService,ContIn.Abp.Terminal.Domain.Tags.ITagRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleDetailDto,System.Int64},Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Articles.ArticleSimpleDto,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="userRepository"></param>
+            <param name="userAppService"></param>
+            <param name="articleTagRepository"></param>
+            <param name="userFavoriteAppService"></param>
+            <param name="sysConfigAppService"></param>
+            <param name="tagRepository"></param>
+            <param name="simpleCache"></param>
+            <param name="detailCache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.RemoveCacheAsync(System.Int64)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除文章
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetArticlesAsync(System.Int64,System.Int32)">
+            <summary>
+            获取文章列表
+            </summary>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.IncludeArticleDetailsAsync(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Articles.Article})">
+            <summary>
+            填充文章详情
+            </summary>
+            <param name="articles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetAsync(System.Int64)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetSimpleAsync(System.Int64)">
+            <summary>
+            获取文章信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.PostFavoriteAsync(System.Int64)">
+            <summary>
+            收藏
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetNearlyAsync(System.Int64)">
+            <summary>
+            获取近期文章
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetRelatedAsync(System.Int64)">
+            <summary>
+            获取相关文章
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetTagsAsync(System.Int64)">
+            <summary>
+            获取文章标签信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.GetUserArticlesAsync(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            获取用户文章列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.PendingAsync(System.Int64)">
+            <summary>
+            审核通过
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.PostCreateAsync(ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto)">
+            <summary>
+            新增文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Articles.CreateUpdateArticleDto)">
+            <summary>
+            编辑
+            </summary>
+            <param name="id">文章编号</param>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Articles.SearchArticlePagedDto)">
+            <summary>
+            分页获取数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Articles.ArticleAppService.UpdateTagsAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Articles.UpdateArticleTagDto)">
+            <summary>
+            修改文章标签
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService">
+            <summary>
+            Github授权
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{ContIn.Abp.Terminal.Domain.Shared.Options.GitHubOptions},System.Net.Http.IHttpClientFactory,Volo.Abp.Json.IJsonSerializer,Microsoft.Extensions.Options.IOptionsMonitor{ContIn.Abp.Terminal.Domain.Shared.Options.JwtOptions},ContIn.Abp.Terminal.Application.Contracts.Captcha.ICaptchaAppService,ContIn.Abp.Terminal.Domain.Users.IUserRepository,Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{ContIn.Abp.Terminal.Domain.Shared.Options.AppOptions})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="gitHubOptions"></param>
+            <param name="httpClientFactory"></param>
+            <param name="jsonSerializer"></param>
+            <param name="jwtOptions"></param>
+            <param name="captchaAppService"></param>
+            <param name="userRepository"></param>
+            <param name="cache"></param>
+            <param name="appOptions"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.GenerateTokenAsync(System.String)">
+            <summary>
+            生成JwtToken
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.GenerateJwtTokenAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            生成JwtToken
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="email"></param>
+            <param name="source">来源平台</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.GenerateJwtTokenCacheKey(System.String,System.String)">
+            <summary>
+            jwttoken 缓存键
+            </summary>
+            <param name="source"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.GetAccessTokenAsync(System.String)">
+            <summary>
+            根据code获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.GetLoginAddressAsync">
+            <summary>
+            获取github登录地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.SignInAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto)">
+            <summary>
+            用户名密码登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.SiteSignInAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.UserPwdLoginDto)">
+            <summary>
+            社区用户名密码登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.RefreshTokenAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.RefreshTokenInputDto)">
+            <summary>
+            刷新JwtToken
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.SiteSignoutAsync(System.String)">
+            <summary>
+            社区用户退出登录
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Authorize.AuthorizeService.SiteSignUpAsync(ContIn.Abp.Terminal.Application.Contracts.Authorize.SiteUserSignupDto)">
+            <summary>
+            注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.TerminalApplicationAutoMapperProfile">
+            <summary>
+            定义实体映射
+            https://docs.automapper.org/en/stable/
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.TerminalApplicationAutoMapperProfile.#ctor">
+            <summary>
+            设置映射关系
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.UserAutoMapperProfile">
+            <summary>
+            用户实体映射
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.UserAutoMapperProfile.#ctor">
+            <summary>
+            设置映射
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.BlobContainers.BlobPictureAppService">
+            <summary>
+            图片存储应用服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.BlobContainers.BlobPictureAppService.#ctor(Volo.Abp.BlobStoring.IBlobContainer{ContIn.Abp.Terminal.Domain.BlobContainers.ProfilePictureContainer})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.BlobContainers.BlobPictureAppService.GetBlobPictureAsync(System.String)">
+            <summary>
+            读取BLOB
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.BlobContainers.BlobPictureAppService.SaveBlobPictureAsync(ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobPictureInputOutputDto)">
+            <summary>
+            保存BLOB
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.BlobContainers.BlobProfileAppService">
+            <summary>
+            文件存储
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.BlobContainers.BlobProfileAppService.#ctor(Volo.Abp.BlobStoring.IBlobContainer{ContIn.Abp.Terminal.Domain.BlobContainers.ProfileFileContainer})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.BlobContainers.BlobProfileAppService.GetBlobProfileAsync(System.String)">
+            <summary>
+            读取文件内容
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.BlobContainers.BlobProfileAppService.SaveBlobProfileAsync(ContIn.Abp.Terminal.Application.Contracts.BlobContainers.BlobFileInputOutputDto)">
+            <summary>
+            保存文件内容
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Captcha.CaptchaAppService">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Captcha.CaptchaAppService.#ctor(Volo.Abp.Guids.IGuidGenerator,Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="guidGenerator"></param>
+            <param name="cache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Captcha.CaptchaAppService.GetRequestAsync(System.String)">
+            <summary>
+            获取验证码
+            </summary>
+            <param name="captchaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Captcha.CaptchaAppService.ValideCaptchaCodeAsync(System.String,System.String)">
+            <summary>
+            验证验证码
+            </summary>
+            <param name="captchaId"></param>
+            <param name="captchaCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Comments.CommentAppService">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.#ctor(ContIn.Abp.Terminal.Domain.Comments.ICommentRepository,ContIn.Abp.Terminal.Domain.Users.IUserRepository,ContIn.Abp.Terminal.Domain.Users.UserManager,Volo.Abp.Auditing.IAuditingHelper,Volo.Abp.Json.IJsonSerializer,ContIn.Abp.Terminal.Domain.Topics.ITopicRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService,ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService,ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService,Volo.Abp.EventBus.Local.ILocalEventBus)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="userRepository"></param>
+            <param name="userManager"></param>
+            <param name="auditingHelper"></param>
+            <param name="jsonSerializer"></param>
+            <param name="topicRepository"></param>
+            <param name="userLikeAppService"></param>
+            <param name="sysConfigAppService"></param>
+            <param name="userAppService"></param>
+            <param name="localEventBus"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Comments.SearchCommentPagedDto)">
+            <summary>
+            分页获取数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.GetCommentsAsync(System.String,System.Int64,System.Int64)">
+            <summary>
+            获取评论
+            </summary>
+            <param name="entityType"></param>
+            <param name="entityId"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.BuildCommentsAsync(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Comments.Comment},System.Boolean,System.Boolean)">
+            <summary>
+            构建评论列表
+            </summary>
+            <param name="comments"></param>
+            <param name="isBuildReplies">是否渲染评论的二级回复，一级评论时要设置为true，其他时候都为false</param>
+            <param name="isBuildQuote">是否渲染评论的引用，二级回复时要设置为true，其他时候都为false</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.PostCreateAsync(ContIn.Abp.Terminal.Application.Contracts.Comments.CreateCommentDto)">
+            <summary>
+            新增评论
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.PostLikedAsync(System.Int64)">
+            <summary>
+            点赞
+            </summary>
+            <param name="commentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Comments.CommentAppService.GetRepliesAsync(System.Int64,System.Int64)">
+            <summary>
+            获取评论回复
+            </summary>
+            <param name="commentId"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.CustomMappers.CommentListObjectMapper">
+            <summary>
+            评论列表对象映射
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.CommentListObjectMapper.#ctor(Volo.Abp.ObjectMapping.IObjectMapper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.CommentListObjectMapper.Map(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Comments.Comment})">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.CommentListObjectMapper.Map(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Comments.Comment},System.Collections.Generic.List{ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto})">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.CustomMappers.CommentObjectMapper">
+            <summary>
+            评论对象映射
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.CommentObjectMapper.#ctor(ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService,Volo.Abp.ObjectMapping.IObjectMapper,Volo.Abp.Json.IJsonSerializer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userLikeAppService"></param>
+            <param name="mapper"></param>
+            <param name="jsonSerializer"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.CommentObjectMapper.Map(ContIn.Abp.Terminal.Domain.Comments.Comment)">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.CommentObjectMapper.Map(ContIn.Abp.Terminal.Domain.Comments.Comment,ContIn.Abp.Terminal.Application.Contracts.Comments.CommentSimpleDto)">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.CustomMappers.MessageObjectMapper">
+            <summary>
+            消息对象映射
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.MessageObjectMapper.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{ContIn.Abp.Terminal.Domain.Shared.Options.AppOptions},Volo.Abp.Json.IJsonSerializer,ContIn.Abp.Terminal.Domain.Users.IUserRepository,Volo.Abp.Timing.IClock)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="options"></param>
+            <param name="jsonSerializer"></param>
+            <param name="userRepository"></param>
+            <param name="clock"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.MessageObjectMapper.Map(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Users.Message})">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.MessageObjectMapper.Map(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Users.Message},System.Collections.Generic.List{ContIn.Abp.Terminal.Application.Contracts.Messages.MessageDto})">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.MessageObjectMapper.GetMessageDetailUrl(ContIn.Abp.Terminal.Domain.Users.Message)">
+            <summary>
+            生成消息详情链接
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.MessageObjectMapper.BuildUserInfoDefaultIfNull(System.Int64)">
+            <summary>
+            构建用户信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.CustomMappers.TopicsObjectMapper">
+            <summary>
+            话题数组对象映射
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicsObjectMapper.#ctor(Volo.Abp.ObjectMapping.IObjectMapper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicsObjectMapper.Map(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Topics.Topic})">
+            <summary>
+            映射
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicsObjectMapper.Map(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Topics.Topic},System.Collections.Generic.List{ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto})">
+            <summary>
+            映射
+            </summary>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.CustomMappers.TopicObjectMapper">
+            <summary>
+            话题对象映射
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicObjectMapper.#ctor(ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService,Volo.Abp.Json.IJsonSerializer,Volo.Abp.ObjectMapping.IObjectMapper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userLikeAppService"></param>
+            <param name="jsonSerializer"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicObjectMapper.Map(ContIn.Abp.Terminal.Domain.Topics.Topic)">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicObjectMapper.Map(ContIn.Abp.Terminal.Domain.Topics.Topic,ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto)">
+            <summary>
+            对象映射
+            </summary>
+            <param name="s"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.CustomMappers.TopicDetailObjectMapper">
+            <summary>
+            话题详情
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicDetailObjectMapper.#ctor(ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService,Volo.Abp.Json.IJsonSerializer,Volo.Abp.ObjectMapping.IObjectMapper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userLikeAppService"></param>
+            <param name="jsonSerializer"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicDetailObjectMapper.Map(ContIn.Abp.Terminal.Domain.Topics.Topic)">
+            <summary>
+            对象映射
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.CustomMappers.TopicDetailObjectMapper.Map(ContIn.Abp.Terminal.Domain.Topics.Topic,ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDetailDto)">
+            <summary>
+            对象映射
+            </summary>
+            <param name="s"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Favorites.FavoriteAppService">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Favorites.FavoriteAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IUserFavoriteRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService,ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService,ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService,Microsoft.Extensions.Options.IOptionsMonitor{ContIn.Abp.Terminal.Domain.Shared.Options.AppOptions})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userFavoriteRepository"></param>
+            <param name="userAppService">用户服务</param>
+            <param name="topicAppService">话题服务</param>
+            <param name="articleAppService">文章服务</param>
+            <param name="appOptions"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Favorites.FavoriteAppService.GetFavoritesAsync(System.Int64)">
+            <summary>
+            获取用户收藏列表
+            </summary>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Feed.UserFeedAppService">
+            <summary>
+            Feed流
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Feed.UserFeedAppService.#ctor(ContIn.Abp.Terminal.Domain.Feed.IUserFeedRepository,ContIn.Abp.Terminal.Application.Contracts.Follows.IFollowAppService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="followAppService"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Feed.UserFeedAppService.CreateByUserAsync(System.Int64,System.Int64,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum)">
+            <summary>
+            新增Feed流
+            </summary>
+            <param name="userId"></param>
+            <param name="dataId"></param>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Feed.UserFeedAppService.DeleteByDataIdAsync(System.Int64,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum)">
+            <summary>
+            根据实体删除
+            </summary>
+            <param name="dataId"></param>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Feed.UserFeedAppService.DeleteByUserAsync(System.Int64,System.Int64)">
+            <summary>
+            根据用户删除
+            </summary>
+            <param name="userId"></param>
+            <param name="authorId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Feed.UserFeedAppService.GetUserFeedsAsync(System.Int64,System.Int64,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum,System.Int32)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="dataType"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Follows.FollowAppService">
+            <summary>
+            粉丝关注
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IUserFollowRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService,ContIn.Abp.Terminal.Domain.Feed.IUserFeedRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowDto})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="userService">用户服务</param>
+            <param name="userFeedRepository"></param>
+            <param name="cache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.GetFansAsync(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            获取粉丝列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.GetFollowsAsync(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            获取关注列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.IsFollowedAsync(System.Int64)">
+            <summary>
+            是否关注
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.GetUserFollowedAsync(System.Int64,System.Int64)">
+            <summary>
+            是否关注，有缓存
+            </summary>
+            <param name="userId"></param>
+            <param name="otherUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.PostFollowAsync(ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowUpdateDto)">
+            <summary>
+            关注
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Follows.FollowAppService.PostUnFollowAsync(ContIn.Abp.Terminal.Application.Contracts.Follows.UserFollowUpdateDto)">
+            <summary>
+            取消关注
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService">
+            <summary>
+            友情链接
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.#ctor(ContIn.Abp.Terminal.Domain.Links.IFriendlyLinkRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Links.FriendlyLinkDto,System.Int64},System.Net.Http.IHttpClientFactory)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="cache"></param>
+            <param name="httpClientFactory"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto)">
+            <summary>
+            新增数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.GetAsync(System.Int64)">
+            <summary>
+            获取单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.GetLinksAsync(System.Int32)">
+            <summary>
+            获取分页数据
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.GetTopLinksAsync">
+            <summary>
+            获取前10个链接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.PostDetectAsync(ContIn.Abp.Terminal.Application.Contracts.Links.GetDetectInputDto)">
+            <summary>
+            采集网站信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.PostListAsync(ContIn.Abp.Terminal.Application.Contracts.Links.GetFriendlyLinkListDto)">
+            <summary>
+            获取列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Links.FriendlyLinkAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Links.CreateUpdateFriendlyLinkDto)">
+            <summary>
+            修改数据
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent">
+            <summary>
+            评论被创建
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent.EntityId">
+            <summary>
+            实体ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent.CommentId">
+            <summary>
+            评论ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent.QuoteId">
+            <summary>
+            引用ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent.SummaryCommentContent">
+            <summary>
+            评论内容简介
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEventHandler">
+            <summary>
+            评论创建
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEventHandler},ContIn.Abp.Terminal.Application.Contracts.Messages.IMessageAppService,ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService,ContIn.Abp.Terminal.Application.Contracts.Articles.IArticleAppService,ContIn.Abp.Terminal.Domain.Comments.ICommentRepository,Volo.Abp.Json.IJsonSerializer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="messageAppService"></param>
+            <param name="articleAppService"></param>
+            <param name="topicAppService"></param>
+            <param name="commentRepository"></param>
+            <param name="jsonSerializer"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEventHandler.HandleEventAsync(ContIn.Abp.Terminal.Application.LocalEventBus.CommentCreateEvent)">
+            <summary>
+            事件处理
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEvent">
+            <summary>
+            话题被 点赞收藏推荐 事件
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEvent.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEvent.EntityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEvent.EntityId">
+            <summary>
+            实体ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEvent.MessageType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEventHandler">
+            <summary>
+            话题操作事件
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEventHandler},ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService,ContIn.Abp.Terminal.Application.Contracts.Messages.IMessageAppService,Volo.Abp.Json.IJsonSerializer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="topicAppService"></param>
+            <param name="messageAppService"></param>
+            <param name="jsonSerializer"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEventHandler.HandleEventAsync(ContIn.Abp.Terminal.Application.LocalEventBus.TopicOperateEvent)">
+            <summary>
+            事件处理程序
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent">
+            <summary>
+            用户积分变化事件对象
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent.Score">
+            <summary>
+            积分
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent.SourceType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent.SourceId">
+            <summary>
+            实体ID
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreLocalEventHandler">
+            <summary>
+            用户积分事件处理程序
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreLocalEventHandler.#ctor(Microsoft.Extensions.Logging.ILogger{ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreLocalEventHandler},ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="userAppService"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreLocalEventHandler.HandleEventAsync(ContIn.Abp.Terminal.Application.LocalEventBus.UserScoreChangedEvent)">
+            <summary>
+            处理方法
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Messages.MessageAppService">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Messages.MessageAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IMessageRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Messages.MessageAppService.AddMessageAsync(System.Int64,System.Int64,System.String,System.String,System.String,ContIn.Abp.Terminal.Domain.Shared.MessageType,System.String)">
+            <summary>
+            新增
+            </summary>
+            <param name="fromId"></param>
+            <param name="userId">消息接收人</param>
+            <param name="title"></param>
+            <param name="content"></param>
+            <param name="quoteContent"></param>
+            <param name="type"></param>
+            <param name="extraData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Messages.MessageAppService.GetMessagesAsync(System.Int32)">
+            <summary>
+            获取用户消息列表
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Messages.MessageAppService.GetMsgRecentAsync">
+            <summary>
+            获取用户最近未读消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Search.SearchAppService">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Search.SearchAppService.#ctor(ContIn.Abp.Terminal.Domain.Topics.ITopicRepository,ContIn.Abp.Terminal.Application.Contracts.Topics.ITopicAppService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="topicRepository"></param>
+            <param name="topicAppService"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Search.SearchAppService.PostTopicsAsync(ContIn.Abp.Terminal.Application.Contracts.Search.SearchInputDto)">
+            <summary>
+            搜索话题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Sys.SysConfigAppService">
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Sys.SysConfigAppService.#ctor(ContIn.Abp.Terminal.Domain.Sys.ISysConfigRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto},Volo.Abp.Json.IJsonSerializer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="cache"></param>
+            <param name="jsonSerializer"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Sys.SysConfigAppService.GetAllAsync">
+            <summary>
+            获取配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Sys.SysConfigAppService.PostSaveAsync(ContIn.Abp.Terminal.Application.Contracts.Sys.SysConfigDto)">
+            <summary>
+            保存配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Tags.TagAppService">
+            <summary>
+            标签应用服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.#ctor(ContIn.Abp.Terminal.Domain.Tags.ITagRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Tags.TagDto,System.Int64},ContIn.Abp.Terminal.Domain.Tags.TagManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="cache"></param>
+            <param name="tagManager"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.GetAsync(System.Int64)">
+            <summary>
+            获取标签信息
+            </summary>
+            <param name="id">标签编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.GetListAsync(ContIn.Abp.Terminal.Application.Contracts.Tags.GetTagListDto)">
+            <summary>
+            获取列表信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto)">
+            <summary>
+            新增标签信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Tags.CreateUpdateTagDto)">
+            <summary>
+            修改标签信息
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除标签信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.GetAutoCompleteAsync(System.String)">
+            <summary>
+            匹配标签
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Tags.TagAppService.GetTagsAsync(System.Int32)">
+            <summary>
+            获取分页数据
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.TerminalApplicationModule">
+            <summary>
+            应用服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.TerminalApplicationModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            配置服务
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Topics.TopicAppService">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.#ctor(ContIn.Abp.Terminal.Domain.Topics.ITopicRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService,ContIn.Abp.Terminal.Domain.Users.IUserRepository,ContIn.Abp.Terminal.Domain.Topics.ITopicNodeRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserLikeAppService,ContIn.Abp.Terminal.Application.Contracts.Users.IUserFavoriteAppService,ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService,ContIn.Abp.Terminal.Application.Contracts.Captcha.ICaptchaAppService,Volo.Abp.Json.IJsonSerializer,Volo.Abp.Auditing.IAuditingHelper,ContIn.Abp.Terminal.Domain.Tags.ITagRepository,ContIn.Abp.Terminal.Domain.Topics.ITopicTagRepository,ContIn.Abp.Terminal.Application.Contracts.Feed.IUserFeedAppService,Volo.Abp.EventBus.Local.ILocalEventBus,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Topics.TopicSimpleDto,System.Int64},Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Topics.TopicDetailDto,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="userService">用户服务</param>
+            <param name="userRepository"></param>
+            <param name="nodeRepository"></param>
+            <param name="userLikeAppService">用户点赞服务</param>
+            <param name="userFavoriteAppService">用户收藏服务</param>
+            <param name="sysConfigAppService">系统配置服务</param>
+            <param name="captchaAppService">验证码服务</param>
+            <param name="jsonSerializer"></param>
+            <param name="auditingHelper"></param>
+            <param name="tagRepository"></param>
+            <param name="topicTagRepository"></param>
+            <param name="userFeedAppService"></param>
+            <param name="localEventBus"></param>
+            <param name="detailCache"></param>
+            <param name="simpleCache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.RemoveCacheAsync(System.Int64)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PostCreateAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto)">
+            <summary>
+            发表话题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PutUpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicDto)">
+            <summary>
+            修改话题
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetAsync(System.Int64)">
+            <summary>
+            获取话题详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetSimpleAsync(System.Int64)">
+            <summary>
+            获取话题信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PostFavoriteAsync(System.Int64)">
+            <summary>
+            收藏
+            </summary>
+            <param name="topicId"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetNodeAsync(System.Int64)">
+            <summary>
+            获取节点信息
+            </summary>
+            <param name="nodeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetNodesAsync">
+            <summary>
+            获取所有节点信息
+            未登录状态也可以查询到
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetRecentLikedAsync(System.Int64)">
+            <summary>
+            获取最近点赞信息
+            </summary>
+            <param name="topicId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetTopicsAsync(System.Int64,System.Boolean,System.Int64)">
+            <summary>
+            获取话题列表
+            </summary>
+            <param name="nodeId"></param>
+            <param name="recommend"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.IncludeTopicDetailsAsync(System.Collections.Generic.List{ContIn.Abp.Terminal.Domain.Topics.Topic})">
+            <summary>
+            填充话题详情
+            </summary>
+            <param name="topics"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetStickyTopicsAsync(System.Int64)">
+            <summary>
+            获取置顶话题
+            </summary>
+            <param name="nodeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PostStickyAsync(System.Int64,System.Boolean)">
+            <summary>
+            设置话题置顶
+            </summary>
+            <param name="topicId"></param>
+            <param name="sticky"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetUserTopicsAsync(System.Int64,System.Int64)">
+            <summary>
+            获取用户话题列表
+            </summary>
+            <param name="userId"></param>
+            <param name="cursor">游标，上一个话题的编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.SearchTopicPagedDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.SetDeleteAsync(System.Int64,System.String)">
+            <summary>
+            设置状态
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.SetRecommendAsync(System.Int64,System.Boolean)">
+            <summary>
+            设置推荐
+            </summary>
+            <param name="id"></param>
+            <param name="recommend"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PostDeleteAsync(System.Int64)">
+            <summary>
+            删除话题
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetTagTopicsAsync(System.Int64,System.Int64)">
+            <summary>
+            获取标签相关文章
+            </summary>
+            <param name="tagId"></param>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.PostLikeAsync(System.Int64)">
+            <summary>
+            点赞
+            </summary>
+            <param name="topicId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicAppService.GetFeedsAsync(System.Int64)">
+            <summary>
+            获取关注人的话题列表
+            </summary>
+            <param name="cursor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService">
+            <summary>
+            节点应用服务
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService.#ctor(ContIn.Abp.Terminal.Domain.Topics.ITopicNodeRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Topics.TopicNodeDto,System.Int64},ContIn.Abp.Terminal.Domain.Topics.TopicNodeManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="cache"></param>
+            <param name="manager"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService.DeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService.GetAsync(System.Int64)">
+            <summary>
+            获取信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService.PostListAsync(ContIn.Abp.Terminal.Application.Contracts.Topics.GetTopicNodeListDto)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Topics.TopicNodeAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Topics.CreateUpdateTopicNodeDto)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Users.CheckInAppService">
+            <summary>
+            签到
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.CheckInAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.ICheckInRepository,ContIn.Abp.Terminal.Application.Contracts.Users.IUserAppService,ContIn.Abp.Terminal.Application.Contracts.Sys.ISysConfigAppService,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto,System.Int64},Volo.Abp.Caching.IDistributedCache{System.Collections.Generic.List{ContIn.Abp.Terminal.Application.Contracts.Users.CheckInDto}},Volo.Abp.EventBus.Local.ILocalEventBus)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="userService">用户服务</param>
+            <param name="sysConfigAppService">系统配置服务</param>
+            <param name="cache"></param>
+            <param name="rankCache"></param>
+            <param name="localEventBus">本地事件总线</param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.CheckInAppService.GetCheckInAsync(System.Int64)">
+            <summary>
+            获取用户签到信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.CheckInAppService.GetRankAsync">
+            <summary>
+            获取当前签到排行榜
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.CheckInAppService.PostCheckInAsync">
+            <summary>
+            用户签到
+            </summary>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Users.UserAppService">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IUserRepository,ContIn.Abp.Terminal.Domain.Users.UserManager,ContIn.Abp.Terminal.Domain.Users.IUserScoreLogRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Users.UserDto,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userRepository"></param>
+            <param name="userManager"></param>
+            <param name="userScoreLogRepository">积分记录服务</param>
+            <param name="cache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.AddScoreAsync(System.Int64,System.Int32,ContIn.Abp.Terminal.Domain.Shared.Enum.EntityTypeEnum,System.Int64,System.String)">
+            <summary>
+            增加或者减少积分
+            </summary>
+            <param name="userId">用户编号</param>
+            <param name="score">积分</param>
+            <param name="sourceType">来源类型</param>
+            <param name="sourceId">来源编号</param>
+            <param name="description">描述</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.CreateAsync(ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.GetAsync(System.Int64)">
+            <summary>
+            根据用户编号获取信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.GetSimpleUserAsync(System.Int64)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.GetCurrentAsync(System.Boolean)">
+            <summary>
+            获取当前登录用户信息
+            </summary>
+            <param name="throwException">是否直接抛出异常</param>
+            <returns>如果没有登录，返回空信息</returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.GetSiteCurrentAsync(System.Boolean)">
+            <summary>
+            获取当前登录用户信息，如果没有返回null
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.GetUserProfileAsync(System.Int64)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.GetScoreRankAsync">
+            <summary>
+            获取积分排行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.IncrOrDecrFansCountAsync(System.Int64,System.Int32)">
+            <summary>
+            增加或者减少粉丝数
+            </summary>
+            <param name="userId"></param>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.IncrOrDecrFollowsCountAsync(System.Int64,System.Int32)">
+            <summary>
+            增加或者减少关注数
+            </summary>
+            <param name="userId"></param>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.IncrTopicCountAsync(System.Int64)">
+            <summary>
+            增加话题数
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Users.GetPagedUserListDto)">
+            <summary>
+            分页获取数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.PostSetPasswordAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetUserPasswordDto)">
+            <summary>
+            设置密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.PostUpdatePasswordAsync(ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserPasswordDto)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.SetBackgroundImageAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetBackgroundImageDto)">
+            <summary>
+            设置个人中心背景图片
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.SetUsernameAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetUsernameDto)">
+            <summary>
+            设置用户名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.SetEmailAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetUserEmailDto)">
+            <summary>
+            设置邮箱
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.SetUserAvatarAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SetBackgroundImageDto)">
+            <summary>
+            设置用户头像
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.UpdateAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Users.CreateUpdateUserDto)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.UpdateUserInfoAsync(System.Int64,ContIn.Abp.Terminal.Application.Contracts.Users.UpdateUserInfoDto)">
+            <summary>
+            修改个人资料
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:ContIn.Abp.Terminal.Domain.Shared.CustomException"></exception>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.CheckUserStatusAsync(ContIn.Abp.Terminal.Application.Contracts.Users.UserDto)">
+            <summary>
+            校验用户状态
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserAppService.HasAnyRoleAsync(System.Collections.Generic.List{System.String},ContIn.Abp.Terminal.Domain.Shared.Enum.RoleTypeEnum)">
+            <summary>
+            校验是否有角色
+            </summary>
+            <param name="userRoles"></param>
+            <param name="roleType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Users.UserFavoriteAppService">
+            <summary>
+            收藏
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserFavoriteAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IUserFavoriteRepository,Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Users.UserFavoriteDto})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="cache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserFavoriteAppService.DeletedAsync(System.String,System.Int64)">
+            <summary>
+            取消收藏
+            </summary>
+            <param name="entityType"></param>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserFavoriteAppService.GetFavoritedAsync(System.String,System.Int64)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="entityType"></param>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserFavoriteAppService.InsertAsync(System.Int64,System.String,System.Int64)">
+            <summary>
+            新增收藏
+            </summary>
+            <param name="userId"></param>
+            <param name="entityType"></param>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Users.UserLikeAppService">
+            <summary>
+            点赞
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserLikeAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IUserLikeRepository,Volo.Abp.Caching.IDistributedCache{System.Collections.Generic.List{ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto}},Volo.Abp.Caching.IDistributedCache{ContIn.Abp.Terminal.Application.Contracts.Users.UserLikeDto})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+            <param name="cache"></param>
+            <param name="likedCache"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserLikeAppService.GetLikedAsync(System.String,System.Int64)">
+            <summary>
+            是否点赞
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserLikeAppService.GetRecentAsync(System.String,System.Int64,System.Int32)">
+            <summary>
+            获取某个实体最近点赞
+            </summary>
+            <param name="entityType">实体类型</param>
+            <param name="entityId">实体编号</param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserLikeAppService.InsertAsync(ContIn.Abp.Terminal.Application.Contracts.Users.CreateUserLikeDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ContIn.Abp.Terminal.Application.Users.UserScoreLogAppService">
+            <summary>
+            用户积分记录
+            </summary>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserScoreLogAppService.#ctor(ContIn.Abp.Terminal.Domain.Users.IUserScoreLogRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserScoreLogAppService.GetScoreLogsAsync(System.Int32)">
+            <summary>
+            获取用户积分记录
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ContIn.Abp.Terminal.Application.Users.UserScoreLogAppService.PostPagedAsync(ContIn.Abp.Terminal.Application.Contracts.Users.SearchUserScoreLogPagedDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>TerminalApplicationContracts.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ContIn.Abp.Terminal.Domain.Shared\ContIn.Abp.Terminal.Domain.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="5.3.3" />
+		<PackageReference Include="Volo.Abp.FluentValidation" Version="5.3.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="TerminalApplicationContracts.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
